@@ -1,0 +1,319 @@
+@charset "UTF-8";
+
+/* ######################################################### GLOBAL CSS ######################################################### */
+:root{
+    /* Color palette */
+    --color1:#ffffff;
+    --color2:#f6f6f6;
+    --color3:#f4ebe6;
+    --color4:#a49c9d;
+    --color5:#241929;
+    --color6:#100219;
+    --color7:#ef3331;
+    --color8:#ff001a;
+    --color9:#941028;
+    --color10:#2919cb;
+
+    --box-shadow-nav: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    --box-shadow-button: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+
+    /* Font styles */
+    --font-titles: 'Lato', sans-serif;
+    --font-paragraph: 'Roboto', sans-serif;
+    --font-icon-size: 1.8rem;
+
+    /* Transitions */
+    --transitions: all 0.3s ease 0s;
+    --transitions2: all 0.3s ease 0.2s;
+    --animation: element 4s linear infinite 0s;
+}
+
+/* ######################################################### CSS Reset ######################################################### */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; }
+
+body {
+    line-height: 1; }
+
+ol, ul {
+    list-style: none; }
+
+blockquote, q {
+    quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none; }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+
+/* ######################################################### General ######################################################### */
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0; }
+
+h1, h2, h3, h4, h5{
+    color: var(--color8);
+    font-family: var(--font-titles);
+}
+    
+p, span, details, small, b, strong, i, em, figcaption, a, input, label, input[placeholder]{
+    color: var(--color6);
+    font-family: var(--font-paragraph);
+}
+
+h1 {
+    font-size: 5.4rem;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.9px;
+}
+  
+h2 {
+    font-size: 4.1rem;
+    font-size: 41px;
+    font-weight: 200;
+    line-height: 0.9;
+    letter-spacing: -0.6px;
+}
+  
+h3 {
+    font-size: 3rem;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+h4 {
+    font-size: 1.8rem;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1;
+}
+  
+h5 {
+    font-size: 1.1rem;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.1px;
+}
+
+h6 {
+    color: var(--color4);
+    font-size: 1rem;
+    font-size: 14px;
+}
+  
+p {
+    font-size: 1.6rem;
+    font-size: 16px;
+    line-height: 1.6rem;
+    letter-spacing: 0.1px;
+}
+
+details {
+    color: var(--color5);
+    font-size: 1.6rem;
+    font-size: 16px;
+    line-height: 1.6rem;
+    letter-spacing: 0.1px;
+}
+
+small {
+    font-size: 1.6rem;
+    font-size: 16px;
+    line-height: 1.6rem;
+    letter-spacing: 0.1px;
+}
+  
+p::-moz-selection, span::-moz-selection {
+    background-color: var(--color10);
+}
+  
+p::selection, span::selection {
+    background-color: var(--color10);
+}
+  
+b, strong {
+    font-size: 1.6rem;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6rem;
+    letter-spacing: 0.1px;
+}
+  
+i, em, figcaption {
+    font-size: 1.6rem;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.6rem;
+    letter-spacing: 0.1px;
+}
+  
+/* Enlaces y botones */
+a {
+    color: var(--color7) !important;
+    font-size: 1.5rem;
+    font-size: 15px;
+    text-decoration: none !important;
+    -webkit-transition: var(--transitions);
+    transition: var(--transitions);
+}
+
+a:hover {
+    color: var(--color10) !important;
+}
+
+.button {
+    appearance: none;
+    background-color: var(--color8);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: var(--color1) !important;
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+    max-width: 170px;
+    min-width: 140px;
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.button:hover{
+    background-color: var(--color1);
+    /* border: 2px solid var(--color10); */
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+    color: var(--color8) !important;
+    filter: blur(5);
+    z-index: 88;
+}
+
+.button_secundary {
+    background-color: var(--color8);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: var(--color1) !important;
+    cursor: pointer;
+    display: block;
+    font-weight: 300;
+    max-width: 200px;
+    min-width: 120px;
+    padding: 7px 20px;
+    text-align: center;
+    transition: var(--transitions);
+}
+
+.button_secundary:hover{
+    background-color: var(--color10);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    color: var(--color1) !important;
+}
+
+/* Contenedor imagen */
+.imagen_fill{
+    background-color: var(--color2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    height: 320px;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    transition: var(--transitions);
+}
+
+.imagen_fill:hover{
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+  /* Márgenes de caja y elementos */
+.padding_top_box {
+    padding-top: 90px;
+}
+  
+.padding_bottom_box {
+    padding-bottom: 90px;
+}
+  
+.margin_top_box {
+    margin-top: 90px;
+}
+  
+.margin_bottom_box {
+    margin-bottom: 90px;
+}
+
+.padding_top {
+    padding-top: 30px;
+}
+  
+.padding_bottom {
+    padding-bottom: 30px;
+}
+  
+.margin_top {
+    margin-top: 30px;
+}
+  
+.margin_bottom{
+    margin-bottom: 30px;
+}
+
+span.tag{
+    background-color: var(--color8);
+    border-radius: 5px;
+    color: var(--color1);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 9px 8px;
+    text-align: center;
+    min-width: 100px;
+}
+
+/* Form */
+input:focus{
+    border: 1px solid var(--color2) !important;
+    outline: none !important;
+    color: var(--color5) !important;
+}
+
+select{
+    outline: none;
+    color: var(--color4) !important;
+}
+
+select:focus{
+    border: 1px solid var(--color10) !important;
+    box-shadow: 0 0 7px rgba(39, 24, 207, 0.5) !important;
+    color: var(--color5) !important;
+}
+
+/* @media only screen and (max-width: 750px) {
+    .App{
+        padding-top: 100px;
+    }    
+} */
